@@ -1,11 +1,17 @@
 import React from 'react';
 import styles from './App.module.scss';
+import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className={styles.app}>
-      <h1 className={styles.app__title}>from spaces travelers hub</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/my-profile" element={<Profile />} />
+      </Routes>
+    </>
   );
 }
 
