@@ -1,0 +1,37 @@
+.navBar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  h1 {
+    flex-grow: 1;
+    height: 3rem;
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    gap: 1rem;
+  }
+
+  ul {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      color: blue !important;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.logo {
+  height: 3rem;
+  width: auto;
+}
+
+a[class="active"] {
+  color: darkblue;
+  text-decoration: underline;
+}
