@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './App.module.scss';
 import { Route, Routes } from 'react-router-dom';
 
-
 function App() {
   return (
     <>
