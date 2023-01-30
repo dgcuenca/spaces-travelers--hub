@@ -20,8 +20,10 @@
     gap: 2rem;
 
     li {
-      color: blue !important;
-      font-size: 1.5rem;
+      a {
+        color: blue;
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -32,6 +34,6 @@
 }
 
 a[class="active"] {
-  color: darkblue;
+  color: darkblue !important;
   text-decoration: underline;
 }
