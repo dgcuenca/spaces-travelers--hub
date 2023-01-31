@@ -21,7 +21,7 @@ RocketList.defaultProps = {
 RocketList.propTypes = {
   rockets: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,

@@ -30,7 +30,7 @@ Rocket.defaultProps = {
 
 Rocket.propTypes = {
   rocket: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
