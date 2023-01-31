@@ -25,16 +25,18 @@ const Header = () => {
     <nav className={styles.navBar}>
       <Link to="/">
         <h1>
-          <img src="/asses/planet.png" alt="logo" className={styles.logo} />
+          <img
+            src="/assets/planet.png"
+            alt="logo"
+            className={styles.logo}
+          />
           Space Traveler&#39;s Hub
         </h1>
       </Link>
       <ul>
         {links.map((link) => (
           <li key={link.id}>
-            <NavLink to={link.path}>
-              {link.text}
-            </NavLink>
+            <NavLink to={link.path}>{link.text}</NavLink>
           </li>
         ))}
       </ul>
