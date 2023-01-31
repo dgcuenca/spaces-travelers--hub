@@ -1,0 +1,52 @@
+.navBar {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 1px solid #20262e;
+  padding-bottom: 1rem;
+
+  h1 {
+    flex-grow: 1;
+    height: 3rem;
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    gap: 1rem;
+  }
+
+  ul {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      position: relative;
+
+      a {
+        color: blue;
+        font-size: 1.5rem;
+      }
+
+      &:last-child::before {
+        content: '';
+        border-left: 1px solid #000;
+        font-size: 1.2rem;
+        position: absolute;
+        height: 100%;
+        left: -1rem;
+      }
+    }
+  }
+}
+
+.logo {
+  height: 3rem;
+  width: auto;
+}
+
+a[class='active'] {
+  color: blue !important;
+  text-decoration: underline;
+}
