@@ -29,6 +29,29 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRockets.pending, (state) => {
+        const newState = { ...state, status: 'loading' };
+        return newState;
+      })
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        const newState = {
+          ...state,
+          status: 'succeeded',
+          rockets: action.payload,
+        };
+        return newState;
+      })
+      .addCase(fetchRockets.rejected, (state, action) => {
+        const newState = {
+          ...state,
+          status: 'failed',
+          error: action.error.message,
+        };
+        return newState;
+      });
+  },
 });
 
 export default rocketsSlice.reducer;
