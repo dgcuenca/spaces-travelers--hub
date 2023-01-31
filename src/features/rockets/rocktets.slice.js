@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const ROCKET_URL = 'https://api.spacexdata.com/v3/rockets';
@@ -18,3 +18,17 @@ export const fetchRockets = createAsyncThunk(
     return modifiedRockets;
   },
 );
+
+const initialState = {
+  rockets: [],
+  status: 'idle',
+  error: null,
+};
+
+const rocketsSlice = createSlice({
+  name: 'rockets',
+  initialState,
+  reducers: {},
+});
+
+export default rocketsSlice.reducer;
