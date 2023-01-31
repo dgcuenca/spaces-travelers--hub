@@ -198,6 +198,7 @@ Give a ⭐️ if you like this project!
 
 - My Family.
 - [Microverse Team](https://www.microverse.org/).
+- [Planet icon](https://www.flaticon.com/free-icons/planet) created by Freepik - [Flaticon](https://www.flaticon.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
