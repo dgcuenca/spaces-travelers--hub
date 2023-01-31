@@ -2,6 +2,8 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+  border-bottom: 1px solid #20262e;
+  padding-bottom: 1rem;
 
   h1 {
     flex-grow: 1;
@@ -21,6 +23,7 @@
 
     li {
       position: relative;
+
       a {
         color: blue;
         font-size: 1.5rem;
