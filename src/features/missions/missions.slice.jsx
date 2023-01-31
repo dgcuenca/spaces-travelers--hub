@@ -15,8 +15,7 @@ export const fetchMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
     description: mission.description,
   }));
   return modifiedMissions;
-},
-);
+});
 
 // Reducer
 const missionsSlice = createSlice({
@@ -37,7 +36,7 @@ const missionsSlice = createSlice({
         missions: action.payload,
       };
     },
-    [fetchMissions.rejected]: (state) => {
+    [fetchMissions.rejected]: (state, action) => {
       const newState = {
         ...state,
         loading: false,
