@@ -10,8 +10,8 @@ export const fetchRockets = createAsyncThunk(
     const rockets = response.data;
     const modifiedRockets = rockets.map((rocket) => ({
       id: rocket.id,
-      name: rocket.rocket_name,
-      type: rocket.rocket_type,
+      name: rocket.name,
+      type: rocket.name,
       description: rocket.description,
       flickr_image: rocket.flickr_images[0],
     }));
