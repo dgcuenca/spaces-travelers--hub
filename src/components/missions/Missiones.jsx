@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Mission from './Mission';
+import styles from './Missiones.module.scss';
 
 const Missiones = ({ missions }) => (
   <>
     <header>
-      <ul>
-        <li>Mission</li>
-        <li>Descrition</li>
-        <li>Status</li>
-        <li />
+      <ul className={styles.header}>
+        <li className={styles.mission} key="1">Mission</li>
+        <li className={styles.description} key="2">Descrition</li>
+        <li className={styles.status} key="3">Status</li>
+        <li className={styles.empty} key="4">Empty</li>
       </ul>
     </header>
-    <ul>
-      <Mission missions={missions} />
-    </ul>
-
+    <div className={styles.missionsContainer}>
+      <ul>
+        <Mission missions={missions} />
+      </ul>
+    </div>
   </>
 );
 

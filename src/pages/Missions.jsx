@@ -19,7 +19,7 @@ const Missions = () => {
     tobeDisplay = <div>Loading</div>;
   } else if (missionLoading === 'succeeded') {
     tobeDisplay = (
-      <main><Missiones missions={missions} /></main>
+      <section><Missiones missions={missions} /></section>
     );
   } else if (missionLoading === 'failed') {
     tobeDisplay = <em>{error}</em>;
