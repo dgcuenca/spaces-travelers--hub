@@ -21,7 +21,14 @@ const Rocket = ({ rocket }) => {
       </div>
       <div className={styles.rocket__right}>
         <h2 className={styles.rocket__title}>{rocket.name}</h2>
-        <p className={styles.rocket__description}>{rocket.description}</p>
+        <p className={styles.rocket__description}>
+          {rocket.reserved ? (
+            <span className={styles.rocket__span}>Reserved</span>
+          ) : (
+            ''
+          )}
+          {rocket.description}
+        </p>
         <button
           type="button"
           className={
