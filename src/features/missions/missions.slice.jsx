@@ -22,26 +22,29 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState: {
     missions: [],
-    loading: false,
+    loading: 'idle',
     error: null,
   },
   extraReducers: {
     [fetchMissions.pending]: (state) => {
-      const newState = { ...state, loading: true };
+      const newState = { ...state, loading: 'loading' };
+      return newState;
     },
     [fetchMissions.fulfilled]: (state, action) => {
       const newState = {
         ...state,
-        loading: false,
+        loading: 'succeeded',
         missions: action.payload,
       };
+      return newState;
     },
     [fetchMissions.rejected]: (state, action) => {
       const newState = {
         ...state,
-        loading: false,
+        loading: 'failed',
         error: action.error.message,
       };
+      return newState;
     },
   },
 });
