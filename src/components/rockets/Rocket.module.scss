@@ -41,4 +41,15 @@
     color: #fff;
     border-radius: 5px;
   }
+
+  &__button--cancel {
+    border: 1px solid #6d757d;
+    color: #6d757d;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1%;
+    padding: 0.625rem 0.813rem;
+    width: fit-content;
+    border-radius: 5px;
+  }
 }
