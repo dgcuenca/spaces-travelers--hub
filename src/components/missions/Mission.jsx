@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Mission.module.scss';
 
 const Mission = ({ missions }) => (
   missions.map((mission) => (
-    <li key={mission.mission_id}>
-      <p>{mission.mission_name}</p>
-      <p>{mission.mission_description}</p>
-      <div>
+    <li key={mission.mission_id} className={styles.mission}>
+      <p className={styles.name}>{mission.mission_name}</p>
+      <p className={styles.description}>{mission.description}</p>
+      <div className={styles.status}>
         <button
           type="button"
         >
           NOT A MEMBER
         </button>
       </div>
-      <div>
+      <div className={styles.empty}>
         <button
           type="button"
         >

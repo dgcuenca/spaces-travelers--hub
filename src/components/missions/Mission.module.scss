@@ -1,24 +1,21 @@
-.header {
+.mission {
   display: flex;
-  background-color: white;
-  font-weight: bold;
-  padding: 1.5rem 2rem 0 2rem;
   font-size: 1rem;
-
-  .mission {
+  .name {
     min-width: 8rem;
     max-width: 8rem;
     flex-grow: 1;
     border: 0.1rem solid #d2d2d3;
+    font-weight: bold;
     padding: 0.2rem 0.2rem;
   }
-
+  
   .description {
     flex-grow: 5;
     border: 0.1rem solid #d2d2d3;
     padding: 0.2rem 0.2rem;
   }
-
+  
   .status {
     min-width: 8rem;
     max-width: 8rem;
@@ -26,7 +23,7 @@
     border: 0.1rem solid #d2d2d3;
     padding: 0.2rem 0.2rem;
   }
-
+  
   .empty {
     min-width: 8rem;
     max-width: 8rem;
@@ -36,8 +33,6 @@
   }
 }
 
-.missionsContainer {
-  display: flex;
-  background-color: white;
-  padding: 0 2rem 1.5rem 2rem;
+.mission:nth-child(odd) {
+  background-color: rgb(236, 234, 234);
 }

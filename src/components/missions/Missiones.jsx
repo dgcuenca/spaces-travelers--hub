@@ -10,7 +10,7 @@ const Missiones = ({ missions }) => (
         <li className={styles.mission} key="1">Mission</li>
         <li className={styles.description} key="2">Descrition</li>
         <li className={styles.status} key="3">Status</li>
-        <li className={styles.empty} key="4">Empty</li>
+        <li className={styles.empty} key="4" />
       </ul>
     </header>
     <div className={styles.missionsContainer}>
