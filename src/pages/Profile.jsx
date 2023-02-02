@@ -18,14 +18,20 @@ const Profile = () => {
       <div className={styles.profile__wrapper}>
         <h2 className={styles.profile__title}>My Rockets</h2>
         <ul className={styles.profile__items}>
-          {rockets.map((rocket) => (
-            <li
-              className={styles.profile__item}
-              key={rocket.id}
-            >
-              {rocket.name}
+          {rockets.length > 0 ? (
+            rockets.map((rocket) => (
+              <li
+                className={styles.profile__item}
+                key={rocket.id}
+              >
+                {rocket.name}
+              </li>
+            ))
+          ) : (
+            <li className={styles['profile__item--none']}>
+              Sorry, currently no reserve rocket to show...
             </li>
-          ))}
+          )}
         </ul>
       </div>
     </div>
