@@ -18,8 +18,9 @@ const Mission = ({ missions }) => {
         <div className={styles.status}>
           <button
             type="button"
+            className={mission.reserved ? styles.active : styles.nomember}
           >
-            NOT A MEMBER
+            {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
           </button>
         </div>
         <div className={styles.empty}>
