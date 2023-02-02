@@ -28,7 +28,15 @@
   &__description {
     font-size: 0.875rem;
     letter-spacing: 2%;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  &__span {
+    background-color: #25a2b7;
+    color: #fff;
+    padding: 4px 5px;
+    border-radius: 5px;
+    margin-right: 4px;
   }
 
   &__button {
