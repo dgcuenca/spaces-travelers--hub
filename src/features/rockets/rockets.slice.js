@@ -89,6 +89,21 @@ const rocketsSlice = createSlice({
 export const getAllRockets = (state) => state.rockets.rockets;
 export const getRocketsStatus = (state) => state.rockets.status;
 export const getRocketsError = (state) => state.rockets.error;
+export const reservedRockets = (state) => {
+  const filteredRockets = state.rockets.rockets.filter(
+    (rocket) => rocket.reserved === true,
+  );
+  const reduceRockets = filteredRockets.map((rocket) => {
+    const { id, name } = rocket;
+    const modifiedRocket = {
+      id,
+      name,
+    };
+    return modifiedRocket;
+  });
+  return reduceRockets;
+};
+
 export const { reserveRocket } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
