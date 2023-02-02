@@ -31,6 +31,24 @@
     flex-grow: 1;
     border: 0.1rem solid #d2d2d3;
     padding: 0.2rem 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .join {
+      color: gray;
+      border: 0.1rem solid gray;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.2rem;
+    }
+
+    .leave {
+      color: red;
+      border: 0.1rem solid red;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.2rem;
+      background-color: white;
+    }
   }
 }
 
