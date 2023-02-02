@@ -6,10 +6,9 @@ import { joinMission } from '../../features/missions/missions.slice';
 
 const Mission = ({ missions }) => {
   const dispatch = useDispatch();
-
-  function joinHandler(id) {
+  const joinHandler = (id) => {
     dispatch(joinMission(id));
-  }
+  };
 
   return (
     missions.map((mission) => (
@@ -28,7 +27,7 @@ const Mission = ({ missions }) => {
             type="button"
             onClick={() => joinHandler(mission.mission_id)}
           >
-            Join Mission
+            {mission.reserved ? 'Leave Mission' : 'Join Mission'}
           </button>
         </div>
       </li>
@@ -41,6 +40,7 @@ Mission.propTypes = {
     mission_id: PropTypes.string.isRequired,
     mission_name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool,
   })).isRequired,
 };
 
