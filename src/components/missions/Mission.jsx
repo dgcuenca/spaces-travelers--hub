@@ -26,6 +26,7 @@ const Mission = ({ missions }) => {
           <button
             type="button"
             onClick={() => joinHandler(mission.mission_id)}
+            className={mission.reserved ? styles.leave : styles.join}
           >
             {mission.reserved ? 'Leave Mission' : 'Join Mission'}
           </button>
