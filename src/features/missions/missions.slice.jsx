@@ -18,7 +18,7 @@ export const fetchMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
 });
 
 export const getJoinedMissions = (state) => {
-  const joinedMissions = state.missions.filter(
+  const joinedMissions = state.missions.missions.filter(
     (mission) => mission.reserved === true,
   );
   return joinedMissions;
