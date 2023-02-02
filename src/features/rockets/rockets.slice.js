@@ -45,21 +45,21 @@ const rocketsSlice = createSlice({
       });
       return { ...state, rockets };
     },
-    // cancelReservation: (state, action) => {
-    //   const rockets = state.rockets.map((rocket) => {
-    //     if (rocket.id === action.payload) {
-    //       return {
-    //         id: rocket.id,
-    //         name: rocket.name,
-    //         type: rocket.name,
-    //         description: rocket.description,
-    //         flickr_image: rocket.flickr_image,
-    //       };
-    //     }
-    //     return { ...rocket, reserved: true };
-    //   });
-    //   return { ...state, rockets };
-    // },
+    cancelReservation: (state, action) => {
+      const rockets = state.rockets.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return {
+            id: rocket.id,
+            name: rocket.name,
+            type: rocket.name,
+            description: rocket.description,
+            flickr_image: rocket.flickr_image,
+          };
+        }
+        return { ...rocket, reserved: true };
+      });
+      return { ...state, rockets };
+    },
   },
   extraReducers: (builder) => {
     builder
