@@ -1,4 +1,4 @@
-{  
+{
   "env": {
     "browser": true,
     "es6": true,
@@ -23,5 +23,5 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ],
+  ]
 }
