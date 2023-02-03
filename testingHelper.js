@@ -5,13 +5,14 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { rocketsSlice } from './src/features/rockets/rockets.slice';
+import { missionsSlice } from './src/features/missions/missions.slice';
 
 const renderWithProviders = (
   ui,
   {
     preloadedState = {},
     store = configureStore({
-      reducer: { rockets: rocketsSlice.reducer },
+      reducer: { rockets: rocketsSlice.reducer, missions: missionsSlice },
       preloadedState,
     }),
     ...renderOptions

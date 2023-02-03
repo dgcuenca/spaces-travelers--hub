@@ -12,7 +12,7 @@ const Profile = () => {
       <div className={styles.profile__wrapper}>
         <h2 className={styles.profile__title}>My Missions</h2>
         <ul className={styles.profile__items}>
-          {missions.length > 0 ? (
+          {missions ? (
             missions.map((mission) => (
               <li
                 className={styles.profile__item}
