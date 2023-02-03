@@ -1,6 +1,4 @@
-{
-  "import/no-extraneous-dependencies":["error", {"devDependencies": true}],
-  
+{  
   "env": {
     "browser": true,
     "es6": true,
@@ -25,5 +23,6 @@
   "ignorePatterns": [
     "dist/",
     "build/"
-  ]
+  ],
+  "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
 }
