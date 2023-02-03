@@ -17,6 +17,13 @@ export const fetchMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
   return modifiedMissions;
 });
 
+export const getJoinedMissions = (state) => {
+  const joinedMissions = state.missions.missions.filter(
+    (mission) => mission.reserved === true,
+  );
+  return joinedMissions;
+};
+
 // Reducer
 const missionsSlice = createSlice({
   name: 'missions',
@@ -29,6 +36,9 @@ const missionsSlice = createSlice({
     joinMission: (state, action) => {
       const missions = state.missions.map((mission) => {
         if (mission.mission_id !== action.payload) return mission;
+        if (mission.reserved) {
+          return { ...mission, reserved: false };
+        }
         return { ...mission, reserved: true };
       });
       return { ...state, missions };
