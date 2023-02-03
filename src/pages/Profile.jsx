@@ -23,7 +23,7 @@ const Profile = () => {
             ))
           ) : (
             <li className={styles['profile__item--none']}>
-              Sorry, currently no reserve rocket to show...
+              Sorry, currently no reserve mission to show...
             </li>
           )}
         </ul>
