@@ -1,5 +1,5 @@
 import store from '../../app/store';
-import { fetchRockets } from './rockets.slice';
+import { fetchRockets, reserveRocket } from './rockets.slice';
 
 describe('Rockets redux state tests', () => {
   it('Should initially set rockets to an empty object', () => {
@@ -50,5 +50,19 @@ describe('Rockets redux state tests', () => {
           'https://live.staticflickr.com/65535/48954138962_ee541e6755_b.jpg',
       },
     ]);
+  });
+
+  it('Falcon 1 Should be reserved in rockets list', () => {
+    store.dispatch(reserveRocket('5e9d0d95eda69955f709d1eb'));
+    const state = store.getState().rockets;
+    expect(state.rockets[0].name).toEqual('Falcon 1');
+    expect(state.rockets[0].reserved).toEqual(true);
+  });
+
+  it('Starship Should be reserved in rockets list', () => {
+    store.dispatch(reserveRocket('5e9d0d96eda699382d09d1ee'));
+    const state = store.getState().rockets;
+    expect(state.rockets[3].name).toEqual('Starship');
+    expect(state.rockets[3].reserved).toEqual(true);
   });
 });
