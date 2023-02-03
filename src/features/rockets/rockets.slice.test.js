@@ -1,5 +1,5 @@
 import store from '../../app/store';
-import { fetchRockets, reserveRocket } from './rockets.slice';
+import { fetchRockets, reservedRockets, reserveRocket } from './rockets.slice';
 
 describe('Rockets redux state tests', () => {
   it('Should initially set rockets to an empty object', () => {
@@ -64,5 +64,13 @@ describe('Rockets redux state tests', () => {
     const state = store.getState().rockets;
     expect(state.rockets[3].name).toEqual('Starship');
     expect(state.rockets[3].reserved).toEqual(true);
+  });
+
+  it('Show only reserved rockets list', () => {
+    const state = reservedRockets(store.getState());
+    expect(state).toEqual([
+      { id: '5e9d0d95eda69955f709d1eb', name: 'Falcon 1' },
+      { id: '5e9d0d96eda699382d09d1ee', name: 'Starship' },
+    ]);
   });
 });
