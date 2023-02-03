@@ -19,13 +19,13 @@ export const fetchRockets = createAsyncThunk(
   },
 );
 
-const initialState = {
+export const initialState = {
   rockets: [],
   status: 'idle',
   error: null,
 };
 
-const rocketsSlice = createSlice({
+export const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
