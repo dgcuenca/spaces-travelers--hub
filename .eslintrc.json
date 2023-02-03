@@ -1,4 +1,6 @@
 {
+  "import/no-extraneous-dependencies":["error", {"devDependencies": true}],
+  
   "env": {
     "browser": true,
     "es6": true,
